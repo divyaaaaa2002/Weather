@@ -9,11 +9,11 @@
 </head>
 <body class="bg-[url('images/bg_image.jpg')] bg-cover min-h-screen bg-no-repeat items-center flex flex-col p-3 gap-5">
     <div class="flex items-center justify-center gap-3">
-        <h1 class="text-white text-2xl font-bold">Weather App</h1> 
+        <h1 class="text-white text-2xl font-bold ">Weather App</h1> 
         <img src="{% static 'images/116.png' %}" alt=""> 
     </div>
     <form  method="get" class="flex gap-3 justify-center">
-        <input  name="city" type="text" placeholder="Enter the City" class="rounded-full px-5 py-2">
+        <input  name="city" type="text" placeholder="Enter the City" required class="rounded-full px-5 py-2">
         <button type="submit"><ion-icon name="search-outline" class="text-white text-2xl p-2 bg-white/20 rounded-full"></ion-icon></button>
     </form>
     <div class="bg-white/20 flex p-3 rounded-2xl gap-5">
@@ -26,8 +26,44 @@
         </div>    
             <img src="{% static 'images/113.png' %} " alt="" class="h-24 w-28">
     </div>
-    
-    
+    <div class="bg-[#1399B0] backdrop-blur-2xl rounded-2xl  flex flex-row p-3 gap-5" id="left">
+        <div class="flex flex-col gap-20" id="left">  
+            <img src="{{icon}} " alt="">
+            <div>
+                <p class="text-white font-bold text-2xl">{{main}}</p>
+                <p class="text-white font-semibold text-sm">{{cloud}}</p>
+            </div>          
+        </div>
+        <div class="flex flex-col gap-2" id="right">
+            <div class="bg-white/20 flex flex-col rounded-xl p-3 h-20 w-60">
+                <div class="flex flex-row gap-5"> 
+                    <ion-icon name="thermometer-outline" class="text-white text-2xl  mt-3"></ion-icon>
+                    <div>
+                        <p class="text-white font-bold text-2xl">{{temperature}}&deg;&nbsp;C</p>
+                        <p class="text-white font-semibold text-sm">Temperature</p> 
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white/20 flex flex-col rounded-xl p-3 " >
+                <div class="flex flex-row gap-5">
+                    <ion-icon name="speedometer-outline" class="text-white text-2xl mt-3"></ion-icon>
+                    <div>
+                        <p class="text-white font-bold text-2xl">{{speed}}m/s</p>
+                        <p class="text-white font-semibold text-sm ">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white/20 flex flex-col rounded-xl p-3 " >
+                <div class="flex flex-row gap-5">
+                    <ion-icon name="rainy-outline" class="text-white text-2xl mt-3"></ion-icon>
+                    <div>
+                        <p class="text-white font-bold text-2xl">{{humidity}}%</p>
+                        <p class="text-white font-semibold text-sm ">Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
