@@ -558,10 +558,6 @@ video {
   position: static;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -578,14 +574,6 @@ video {
   height: 6rem;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-3 {
-  height: 0.75rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -596,14 +584,6 @@ video {
 
 .w-60 {
   width: 15rem;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .flex-row {
@@ -650,6 +630,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -660,7 +644,7 @@ video {
 }
 
 .bg-white\/20 {
-  background-color: rgb(255 255 255 / 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .bg-\[url\(\'images\/bg_image\.jpg\'\)\] {
